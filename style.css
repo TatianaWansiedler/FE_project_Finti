@@ -269,45 +269,30 @@ a {
     font-weight: 800;
     color:rgb(253,34,22);
 }
-.card__top--2 {
+.card__top--mod {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
+    justify-content: space-between;
 }
-.card__system {
-    height: 20px;
-    border-radius:50%;
-    aspect-ratio:1;
-    background: black;
+.card__icon--black {
+    font-size: 25px;
 }
-.card__subtitle {
-    text-transform: uppercase;
-    font-size: 8px;
-    color: rgb(120,139,101);
-}
-.card__number p {
-    font-size: 18px;
+.card__text {
+    font-size: 7px;
     font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.card__holder {
-    display: flex;
-    justify-content: space-between;
-    font-size: 8px;
-    font-weight: 600;
     text-transform: uppercase;
-    color: rgb(120,139,101);
+    color: gray;
+    padding-bottom: 5px;
 }
-.card__data {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+.card__number {
+    font-size: 23px;
     font-weight: 600;
+    letter-spacing: 1.2px;
 }
-.card__bottom1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0;
+.mr-70{
+    margin-right: 70px;
 }
+/* ---------------------------------- */
+
+
