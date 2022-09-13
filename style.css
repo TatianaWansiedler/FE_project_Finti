@@ -138,10 +138,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items:center;
-    padding: 20px 40px;
+    padding: 20px 40px 150px 20px ;
     background: var(--main-bg);
     border: var(--border);
-    padding-bottom: 150px;
 }
 .search {
     background:white;
@@ -500,23 +499,52 @@ a {
     .page {
         margin: 0;
     }
-    .cards {
-        flex-direction: column;
-        max-width:300px;
+    .header {
+        padding: 20px 20px 40px 60px;
+    }
+    .search {
+        width: 100px;
+    }
 
+    .cards {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
     }
     .card {
         margin: 10px;
     }
+    .statistics{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .statistics__item {
+        min-width: 500px;
+        margin: 15px;
+        padding: 15px;
+        border-radius:10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .wrapper {
+        display: block;
+    }
+    .last-transact {
+        width: 100%;
+        padding: 40px;
+        margin: 0;
+    }
+    .coming-transact{
+        width: 100%;
+        padding: 40px;
+    }
     .burger {
         display:block;
         position: fixed;
-        font-size: 3rem;
+        font-size: 25px;
         background:white;
-        border: 1px solid gray;
+        /* border: 1px solid gray; */
         left: 0;
-        bottom: 5rem;
-        padding: 0 1rem;
+        top: 20px;
+        padding: 10px;
         transition: all .5s ease-out;
         cursor: pointer;
     }
