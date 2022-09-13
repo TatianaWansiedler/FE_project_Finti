@@ -44,6 +44,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .logo {
@@ -484,5 +485,42 @@ a {
 .coming-transact__icon--orange {
     background: rgb(254,174,43);
 }
+.burger{
+    display: none;
+}
 
+@media (max-width:768px){
+    .sidebar {
+        transform: translateX(-250px);
+        transition: all .5s ease-out;
+    }
+    .sidebar--open {
+        transform: none;
+    }
+    .page {
+        margin: 0;
+    }
+    .cards {
+        flex-direction: column;
+        max-width:300px;
 
+    }
+    .card {
+        margin: 10px;
+    }
+    .burger {
+        display:block;
+        position: fixed;
+        font-size: 3rem;
+        background:white;
+        border: 1px solid gray;
+        left: 0;
+        bottom: 5rem;
+        padding: 0 1rem;
+        transition: all .5s ease-out;
+        cursor: pointer;
+    }
+    .burger--open {
+        left: 250px;
+    }
+}

@@ -13,6 +13,7 @@
 <body>
 
     <div class="wrapper">
+        <div class="burger" onclick="toggleMenu()">+</div>
         <aside class="sidebar">
             <div class="logo">
                 <i class="lab la-artstation"></i>
@@ -420,7 +421,16 @@
                 </section>
             </div>
         </main>
+    </div>
+    <script>
+        function toggleMenu() {
+            var sidebar = document.querySelector('.sidebar');
+            var burger = document.querySelector('.burger');
 
+            sidebar.classList.toggle('sidebar--open');
+            burger.classList.toggle('burger--open');
+        }
+    </script>
        
     
 </body>
