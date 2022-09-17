@@ -36,7 +36,8 @@ a {
   position: fixed;
   left: 0;
   top: 0;
-  height: 100vh;
+  bottom: 0;
+  height: 100%;
   width: 250px;
   background: var(--main-bg);
   padding: 20px;
@@ -88,10 +89,7 @@ a {
   border: none;
   border-radius: 12px;
   background: linear-gradient(
-    121deg,
-    rgb(252, 238, 223) 0%,
-    rgb(222, 225, 249) 100%
-  );
+  121deg, rgb(252, 238, 223) 0%, rgb(222, 225, 249) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,7 +142,7 @@ a {
   align-items: center;
   padding: 20px 40px 150px 20px;
   background: var(--main-bg);
-  border: var(--border);
+  border-bottom: var(--border);
 }
 .search {
   background: white;
@@ -329,7 +327,7 @@ a {
   border-bottom: var(--border);
 }
 .statistics__item {
-  width: 300px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
 }
@@ -502,25 +500,55 @@ a {
 .burger {
   display: none;
 }
-
+/* ----------------mob version---------------------------- */
 @media (max-width: 768px) {
   .sidebar {
-    transform: translateX(-250px);
+    width: 80%;
+    transform: translateX(-100%);
     transition: all 0.5s ease-out;
+  }
+  .burger {
+    display: block;
+    position: fixed;
+    font-size: 25px;
+    background: white;
+    left: 0;
+    top: 20px;
+    padding: 10px;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+  }
+  .burger--open {
+    left: 80%;
   }
   .sidebar--open {
     transform: none;
   }
+  /* ----------------------------------- */
   .page {
     margin: 0;
+    background:var(--main-bg);
   }
   .header {
     padding: 20px 20px 40px 60px;
+    border:none;
   }
   .search {
-    width: 100px;
+    width: 120px;
   }
-
+  .icons__item i {
+    font-size: 18px;
+    padding: 5px;
+  }
+  .subtitle {
+    font-size: 13px;
+  }
+  .avatar img {
+    height: 25px;
+  }
+  .links {
+    display: none;
+  }
   .cards {
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -533,12 +561,13 @@ a {
     flex-wrap: wrap;
   }
   .statistics__item {
-    min-width: 500px;
+    max-width: 350px;
     margin: 15px;
     padding: 15px;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+  /* --------------------------------------- */
   .wrapper {
     display: block;
   }
@@ -551,19 +580,5 @@ a {
     width: 100%;
     padding: 40px;
   }
-  .burger {
-    display: block;
-    position: fixed;
-    font-size: 25px;
-    background: white;
-    /* border: 1px solid gray; */
-    left: 0;
-    top: 20px;
-    padding: 10px;
-    transition: all 0.5s ease-out;
-    cursor: pointer;
-  }
-  .burger--open {
-    left: 250px;
-  }
+
 }
